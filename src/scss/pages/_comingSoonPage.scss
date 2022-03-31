@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+
+.comingSoonPage {
+  background-color: $clr-secondary;
+  color: $clr-primary;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+
+  .container {
+    height: 100%;
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    opacity: 0;
+
+    .textContent {
+      z-index: 1;
+      .title {
+        font-size: 4em;
+      }
+
+      .text {
+        font-size: 1.5em;
+        font-weight: 300;
+      }
+    }
+
+    .particlesContainer {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      top: 0;
+      z-index: 0;
+
+      .particle {
+        opacity: 0;
+        $particleSize: 35px;
+
+        height: $particleSize;
+        width: $particleSize;
+        border-radius: 50%;
+        background: $clr-primary;
+        position: relative;
+      }
+
+      .particle:nth-child(3n) {
+        filter: blur(random(5) + 1 + px);
+      }
+    }
+  }
+}
