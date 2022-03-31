@@ -7,31 +7,24 @@ import PageTitle from "../components/PageTitle";
 export default function Formation(props) {
 	let educationList = [
 		{
-			key: 1,
-			name: "Baccalauréat scientifique option",
+			name: "Option Informatique et science du numérique",
 			school: "Lycée bonaparte, toulon",
 			year: 2018,
 			state: "finished",
+			diploma: "Baccalauréat scientifique",
 		},
 		{
-			key: 2,
-			name: "DUT Génie Électrique et Informatique Industrielle",
+			name: "Génie Électrique et Informatique Industrielle",
 			school: "Université de Toulon, Campus la Garde",
 			year: 2020,
+			diploma: "Diplome universitaire technologique",
 			state: "finished",
 		},
 		{
-			key: 3,
-			name: "Formation développeur web et applications mobiles",
+			name: "développeur web et web mobile",
 			school: "Greta du var",
 			year: 2021,
-			state: "finished",
-		},
-		{
-			key: 4,
-			name: "Titre professionnel développeur web",
-			school: "Greta du var",
-			year: 2021,
+			diploma: "Titre professionnel ",
 			state: "finished",
 		},
 	];
@@ -85,10 +78,11 @@ export default function Formation(props) {
 											? "educationCard"
 											: "educationCard educationCard-current"
 									}
-									key={education.key}>
-									<div className='year'>{education.year}</div>
-									<div className='name'>{education.name}</div>
-									<div className='school'>{education.school}</div>
+									key={index}>
+									<p className='diploma'>{education.diploma}</p>
+									<p className='year'>{education.year}</p>
+									<p className='name'>{education.name}</p>
+									<p className='school'>{education.school}</p>
 								</div>
 							);
 						})}

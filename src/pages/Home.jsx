@@ -72,13 +72,13 @@ export default function Home(props) {
 				<PageTitle title='Accueil' />
 				<div className='text'>
 					<div className='textWrapper'>
-						<span>I am a</span>
+						<span>Je suis</span>
 					</div>
 					<div className='textWrapper'>
-						<span>junior Full stack</span>
+						<span>developpeur web</span>
 					</div>
 					<div className='textWrapper'>
-						<span> web developer</span>
+						<span> full stack junior</span>
 					</div>
 				</div>
 

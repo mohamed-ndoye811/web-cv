@@ -36,6 +36,12 @@
 					padding: 5em 3em;
 				}
 
+				p {
+					display: inline-block;
+					width: fit-content;
+					height: fit-content;
+				}
+
 				.year {
 					position: absolute;
 					font-size: 2em;
@@ -46,7 +52,8 @@
 						opacity: 0.6;
 					}
 				}
-				.name {
+
+				.diploma {
 					font-size: 1.75em;
 					font-weight: 700;
 					@include screen-max($tablet) {
@@ -54,8 +61,19 @@
 					}
 				}
 
-				.school {
+				.name {
 					font-size: 1.2em;
+					font-style: italic;
+					font-weight: 300;
+					@include screen-max($tablet) {
+						font-size: 1.5em;
+						font-weight: 500;
+						opacity: 0.6;
+					}
+				}
+
+				.school {
+					font-size: 1em;
 					font-style: italic;
 					font-weight: 300;
 					@include screen-max($tablet) {
@@ -80,7 +98,7 @@
 						border-radius: inherit;
 						opacity: 0.2;
 						-webkit-filter: blur(1px);
-						        filter: blur(1px);
+						filter: blur(1px);
 						z-index: -1;
 						position: absolute;
 						background-image: linear-gradient(
