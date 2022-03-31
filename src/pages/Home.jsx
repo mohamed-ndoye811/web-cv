@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { useEffect } from "react";
 import "../scss/pages/_home.scss";
 import anime from "animejs";
 
@@ -68,7 +68,7 @@ export default function Home(props) {
 
 	return (
 		<main className='homePage'>
-			<div className='container homeContainer'>
+			<section className='container homeContainer'>
 				<PageTitle title='Accueil' />
 				<div className='text'>
 					<div className='textWrapper'>
@@ -116,7 +116,7 @@ export default function Home(props) {
 						/>
 					</svg>
 				</div>
-			</div>
+			</section>
 		</main>
 	);
 }

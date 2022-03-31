@@ -1,12 +1,11 @@
 import "./scss/main.scss";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import OpeningLoader from "./components/OpeningLoader";
 
 // PAGES IMPORTS
 import Home from "./pages/Home";
-import Works from "./pages/Works";
 import Experience from "./pages/Experience";
 import Competences from "./pages/Competences";
 import Formation from "./pages/Formation";
@@ -39,7 +38,6 @@ function App() {
 		setTimeout(() => {
 			pageContentDisplayToggle();
 		}, 1200);
-		// eslint-disable-next-line
 	}, []);
 
 	let routesList = [
@@ -73,12 +71,14 @@ function App() {
 
 	return (
 		<>
-			{opnLoadDisplay ? (
+			{opnLoadDisplay && (
 				<OpeningLoader
 					finishedToggle={opnLoadToggle}
-					startPageAnimation={startContentAnimationsToggle}></OpeningLoader>
-			) : null}
-			{pageContentDisplay ? (
+					startPageAnimation={startContentAnimationsToggle}
+				/>
+			)}
+
+			{pageContentDisplay && (
 				<>
 					<Menu startAnimations={startContentAnimations}></Menu>
 					<Routes>
@@ -86,7 +86,6 @@ function App() {
 							return (
 								<Route
 									key={index}
-									exact
 									path={route.path}
 									element={route.component}
 								/>
@@ -95,10 +94,7 @@ function App() {
 						<Route component={PageNotFound}></Route>
 					</Routes>
 				</>
-			) : (
-				""
 			)}
-			<div className='websiteBackground'></div>
 		</>
 	);
 }

@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { useEffect } from "react";
 import anime from "animejs";
 
 //---- Component imports
@@ -68,7 +68,7 @@ export default function Formation(props) {
 		<>
 			<PageTitle title='Formation' />
 			<main className='educationPage'>
-				<div className='container educationContainer'>
+				<section className='container educationContainer'>
 					<div className='educationList'>
 						{educationList.reverse().map((education, index) => {
 							return (
@@ -79,15 +79,23 @@ export default function Formation(props) {
 											: "educationCard educationCard-current"
 									}
 									key={index}>
-									<p className='diploma'>{education.diploma}</p>
-									<p className='year'>{education.year}</p>
-									<p className='name'>{education.name}</p>
-									<p className='school'>{education.school}</p>
+									<div className='diploma'>
+										<p>{education.diploma}</p>
+									</div>
+									<div className='year'>
+										<p>{education.year}</p>
+									</div>
+									<div className='name'>
+										<p>{education.name}</p>
+									</div>
+									<div className='school'>
+										<p>{education.school}</p>
+									</div>
 								</div>
 							);
 						})}
 					</div>
-				</div>
+				</section>
 			</main>
 		</>
 	);

@@ -25,6 +25,7 @@
 				text-align: right;
 				text-transform: uppercase;
 				border-radius: 10px;
+				width: 100%;
 
 				@include screen-max($desktop) {
 					height: 150px;
@@ -34,12 +35,6 @@
 				@include screen-max($tablet) {
 					height: 100px;
 					padding: 5em 3em;
-				}
-
-				p {
-					display: inline-block;
-					width: fit-content;
-					height: fit-content;
 				}
 
 				.year {

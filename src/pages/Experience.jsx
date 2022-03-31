@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { useEffect } from "react";
 import anime from "animejs";
 
 //---- Component imports
@@ -70,7 +70,7 @@ export default function Experience(props) {
 		<>
 			<PageTitle title='Experience' />
 			<main className='experiencePage'>
-				<div className='container experienceContainer'>
+				<section className='container experienceContainer'>
 					<div className='experienceList'>
 						{experienceList
 							.sort((a, b) => {
@@ -111,7 +111,7 @@ export default function Experience(props) {
 								);
 							})}
 					</div>
-				</div>
+				</section>
 			</main>
 		</>
 	);
